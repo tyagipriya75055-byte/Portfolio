@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7ff;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Navbar */
+
+header {
+    background: #111827;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1100px;
+    margin: auto;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav h2 {
+    color: #60a5fa;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #60a5fa;
+}
+
+#themeBtn {
+    border: none;
+    background: #374151;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Hero */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #dbeafe, #ede9fe);
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin: 15px 0;
+}
+
+.hero h1 span {
+    color: #2563eb;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+}
+
+.welcome {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+.btn,
+.card-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn:hover,
+.card-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* Sections */
+
+section {
+    padding: 80px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 45px;
+}
+
+/* Team */
+
+.team-container {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.profile-img {
+    width: 110px;
+    height: 110px;
+    margin: auto;
+    border-radius: 50%;
+    background: #2563eb;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.profile-img.second {
+    background: #9333ea;
+}
+
+.card h2 {
+    margin-top: 20px;
+}
+
+.role {
+    color: #2563eb;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-top: 20px;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.skills span {
+    background: #e0e7ff;
+    color: #3730a3;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* Projects */
+
+.projects-container {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project h3 {
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+/* Contact */
+
+form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea {
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    padding: 14px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #1d4ed8;
+}
+
+/* Footer */
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Dark Mode */
+
+body.dark {
+    background: #111827;
+    color: #f9fafb;
+}
+
+body.dark .card,
+body.dark .project {
+    background: #1f2937;
+}
+
+body.dark .hero {
+    background: linear-gradient(135deg, #111827, #312e81);
+}
+
+body.dark input,
+body.dark textarea {
+    background: #374151;
+    color: white;
+    border-color: #4b5563;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 12px;
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .team-container,
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
